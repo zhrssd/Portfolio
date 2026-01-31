@@ -1330,11 +1330,12 @@
         <li><a href="#engagement">Engagement</a></li>
         <li><a href="#projets">Projets</a></li>
         <li><a href="#interets">Passions</a></li>
+        <li><a href="#competences">Compétence</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
-    <!-- Hero Section -->
+   <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
@@ -1342,10 +1343,9 @@
                 <br>
                 <h1>
                     <br>
-                <span class="first-name">Fatima</span>
-                <span class="last-name">Saadna</span>
+                    <span class="first-name">Fatima</span>
+                    <span class="last-name">Saadna</span>
                 </h1>   
-               
                 <div class="tagline">Data Science</div>
                 <p class="description">
                     Étudiante en L3 CMI Data Science à Paris Nanterre, passionnée par l'intersection 
@@ -1365,7 +1365,22 @@
                     </a>
                 </div>
             </div>
-
+            
+            <!-- Photo et boutons CV/LinkedIn -->
+            <div class="hero-profile">
+                <div class="profile-image">
+                    <img src="IMG_5085.JPG" alt="Fatima Saadna">
+                </div>
+                <div class="profile-buttons">
+                    <a href="cv_Fatima.pdf" download class="btn btn-cv">
+                        📄 Télécharger mon CV
+                    </a>
+                    <a href="https://www.linkedin.com/in/fatima-saadna/" target="_blank" class="btn btn-linkedin">
+                        💼 LinkedIn
+                    </a>
+                </div>
+            </div>
+            
             <div class="hero-stats">
                 <div class="stat-card">
                     <div class="stat-number">5</div>
@@ -1382,6 +1397,80 @@
             </div>
         </div>
     </section>
+
+    <style>
+        /* Conteneur pour la photo et les boutons */
+        .hero-profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .profile-image img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-cv, .btn-linkedin {
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-cv {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-cv:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .btn-linkedin {
+            background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+            box-shadow: 0 4px 15px rgba(0, 119, 181, 0.4);
+        }
+
+        .btn-linkedin:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 119, 181, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .profile-image img {
+                width: 140px;
+                height: 140px;
+            }
+            
+            .profile-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn-cv, .btn-linkedin {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 
     <!-- Timeline / Parcours Section -->
     <section id="parcours">
@@ -1815,7 +1904,6 @@
                     </ul>
                 </div>
             </div>
-
             <!-- Voyages & Lecture -->
             <div class="interest-card fade-in">
                 <div class="interest-content">
@@ -1836,7 +1924,6 @@
 
         </div>
     </section>
-
     <!-- Skills Section -->
     <section id="competences">
         <div class="section-header reveal">
@@ -1901,7 +1988,7 @@
             </div>
 
             <div class="skill-category">
-                <h3><span class="skill-icon">۶ৎ</span> Soft Skills</h3>
+                <h3><span class="skill-icon"></span> Soft Skills</h3>
                 <div class="skill-list">
                     <span class="skill-item">Travail d'équipe</span>
                     <span class="skill-item">Communication</span>
@@ -1912,6 +1999,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Contact Section -->
     <section id="contact">
