@@ -91,6 +91,9 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             letter-spacing: -0.02em;
+
+            cursor: pointer;
+            text-decoration: none;
         }
 
         nav ul {
@@ -1225,17 +1228,20 @@
             font-size: 0.95rem;
         }
 
-        /* Scroll Reveal Animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+       /* Scroll Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform;
+}
 
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
         /* Responsive Design */
         @media (max-width: 1024px) {
@@ -1324,7 +1330,7 @@
 
     <!-- Navigation -->
     <nav>
-    <div class="logo">۶ৎ</div>
+        <a href="#top" class="logo">۶ৎ</a>
     <ul>
         <li><a href="#parcours">Parcours</a></li>
         <li><a href="#engagement">Engagement</a></li>
@@ -1336,7 +1342,7 @@
 </nav>
 
    <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="top">
         <div class="hero-content">
             <div class="hero-text">
                 <br>
@@ -1348,16 +1354,13 @@
                 </h1>   
                 <div class="tagline">Data Science</div>
                 <p class="description">
-                    Étudiante en L3 CMI Data Science à Paris Nanterre, passionnée par l'intersection 
-                    entre données, analyse statistique et économie. Je transforme les chiffres en 
-                    insights actionnables et en visualisations percutantes.
+                    Étudiante en L3 CMI Data Science à l’Université Paris Nanterre, je mobilise l’informatique, la statistique et l’analyse de données pour transformer l’information brute en insights exploitables et aider à la prise de décision.
                 </p>
                 <div class="highlight">
-                    <p>🎯 <strong>Recherche activement</strong> un stage en data science / analyse de données 
-                    avec possibilité d'alternance pour le Master CMI D3S</p>
+                    <p>🎯 <strong>Recherche activement</strong> un stage avec possibilité d'alternance pour le Master CMI D3S</p>
                 </div>
                 <div class="cta-group">
-                    <a href="#projects" class="btn btn-primary">
+                    <a href="#projets" class="btn btn-primary">
                         Découvrir mes projets
                     </a>
                     <a href="#contact" class="btn btn-secondary">
@@ -1475,6 +1478,10 @@
     <!-- Timeline / Parcours Section -->
     <section id="parcours">
         <div class="section-header reveal">
+              <br>
+                <br>
+                  <br>
+                <br>
             <h2 class="section-title">Mon <span class="gradient-text">Parcours</span></h2>
             <p class="section-subtitle">Une formation pluridisciplinaire alliant data science, économie et informatique</p>
         </div>
