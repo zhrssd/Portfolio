@@ -12,7 +12,11 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+        /* TEST DÉBOGAGE - à mettre tout en haut de ton CSS */
+#valeur-ajoutee {
+    margin-top: 200px !important;
+    padding-top: 150px !important;
+}
         :root {
             --bg-primary: #0a0e27;
             --bg-secondary: #151b3d;
@@ -278,6 +282,7 @@
                 transform: translateX(0);
             }
         }
+        
 
         .stat-card {
             background: var(--bg-card);
@@ -334,7 +339,7 @@
 
         /* Section Styling */
         section {
-            padding: 8rem 5%;
+            padding: 7rem 5%;
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -1866,7 +1871,7 @@
                     </div>
                     <div class="skill-item">
                         <span class="skill-label">Machine Learning</span>
-                        <span class="skill-tech">Scikit-learn, TensorFlow</span>
+                        <span class="skill-tech">R, Statistique</span>
                     </div>
                 </div>
                 
@@ -2126,6 +2131,7 @@
     font-size: 1em;
 }
 
+
 /* Citation de section */
 .section-quote {
     max-width: 800px;
@@ -2228,6 +2234,26 @@
                 gap: 3rem;
             }
         }
+        /* Quote Block Hover Effect */
+.section-quote {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: default; /* ou pointer si tu veux indiquer que c'est interactif */
+}
+
+.section-quote:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(6, 182, 212, 0.2);
+    border-color: var(--accent);
+}
+
+/* Si tu veux aussi animer le texte de la citation au hover */
+.section-quote:hover .quote-text {
+    color: var(--accent-bright);
+}
+
+.quote-text {
+    transition: color 0.3s ease;
+}
         
     </style>
 
@@ -2402,6 +2428,12 @@
             </div>
         </div>
     </section>
+         
+    <style>
+    #parcours {
+    padding-top: 3rem !important; /* Au lieu de 8rem */
+}    
+    </style>
 
     <!-- Projects Section -->
     <section id="projets">
